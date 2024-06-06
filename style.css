@@ -1,0 +1,35 @@
+@import url('./estrelas.css');
+
+*,*::after,*::before{box-sizing: border-box;}
+*{margin: 0;}
+body{
+    font-family: system-ui;
+    width: 90%;
+    margin-inline: auto;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    justify-self: center;
+}
+
+.wrapper{
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-template-rows: repeat(4, auto); <- essa linha é redundante */
+    gap: 1rem;
+    margin-top: 5rem;
+}
+
+.box{
+    grid-row: span 4; /*1 / 4 */
+    border: 1px solid #CCC;
+    border-radius: 6px;
+    padding: 2rem;
+    text-align: center;
+    display: grid;
+    grid-template-rows: subgrid;
+}
+
